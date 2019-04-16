@@ -2,16 +2,16 @@ require "pry"
 
 class Player
   attr_accessor :name
-  attr_reader :life_point
+  attr_reader :life_points
 
   def initialize(name)
     @name = name
-    @life_point = 10
-    puts "Player #{name} created. Life point #{@life_point}"
+    @life_points = 10
+    puts "Player #{name} created. Life point #{@life_points}"
   end
 
   def show_status
-    puts "#{@name} has #{@life_point} life point(s)."
+    puts "#{@name} has #{@life_points} life point(s)."
   end
 
   def attack(target)
@@ -22,9 +22,9 @@ class Player
   end
 
   def gets_damage(damage_received)
-    @life_point = @life_point - damage_received
-    if @life_point <= 0
-      @life_point = 0
+    @life_points = @life_points - damage_received
+    if @life_points <= 0
+      @life_points = 0
       return "Player #{@name} game over !"
     end
   end

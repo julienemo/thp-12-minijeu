@@ -23,7 +23,7 @@ class HumanPlayer < Player
       @weapon_lever = level
     else
       puts "F@*#$...You may just as well keep what you have now... "
-
+    end
 
   end
 
