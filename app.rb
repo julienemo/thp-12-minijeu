@@ -26,3 +26,10 @@ while player1.life_points.positive? && player2.life_points.positive?
   player2.attack(player1)
   puts ""
 end
+ puts '########################################'
+if player1.life_points > player2.life_points
+	puts "--#{player1.name} a gangné le combat-----"
+else
+	puts "--#{player2.name} a gangné le combat-----"
+end
+
