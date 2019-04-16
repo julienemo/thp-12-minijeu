@@ -38,5 +38,3 @@ class Player
 
 
 end
-
-binding.pry
