@@ -6,7 +6,7 @@ class Player
 
   def initialize(name)
     @name = name
-    @life_point = 10
+    @life_point = 40
     puts "Player #{name} created. Life point #{@life_point}"
   end
 
@@ -15,17 +15,17 @@ class Player
   end
 
   def attack(target)
+    strike = computes_damage
     puts "#{@name} attacks #{target.name}."
-    puts "#{target} gets #{computes_damage} damage."
-    target.get_damage(computes_damage)
+    puts "#{target.name} gets #{strike} damage."
+    target.gets_damage(strike)
   end
 
-
   def gets_damage(damage_received)
-    @life_points = @life_points - damage_received
-    if @life_points <= 0
-      @life_points = 0
-      puts "le joueur #{@name} a été tué !"
+    @life_point = @life_point - damage_received
+    if @life_point <= 0
+      @life_point = 0
+      return "Player #{@name} game over !"
     end
   end
 
@@ -34,6 +34,7 @@ class Player
   def computes_damage
     return rand(1..6)
   end
+
 
 
 end
