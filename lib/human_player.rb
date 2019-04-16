@@ -26,6 +26,21 @@ class HumanPlayer < Player
     end
   end
 
+  def search_health_pack
+    r_number = rand(1..6)
+    if r_number = 1
+      puts "You did not find anything... "
+    elsif [2..5].include?r_number
+    	@life_points += 50
+    	@life_points = 100 if @life_points > 100
+    	puts 'Bravo, you found a pack of +50 life points !'
+    else
+    	@life_points += 80
+    	@life_points = 100 if @life_points > 100
+    	puts 'Waow,  you found a pack of +80 life points !'
+    end
+  end
+
   private
 
   def computes_damage
