@@ -26,5 +26,15 @@ while player1.life_points.positive? && player2.life_points.positive?
   player2.attack(player1)
   puts ""
 end
+<<<<<<< HEAD
 
 binding.pry
+=======
+ puts '########################################'
+if player1.life_points > player2.life_points
+	puts "--#{player1.name} a gangné le combat-----"
+else
+	puts "--#{player2.name} a gangné le combat-----"
+end
+
+>>>>>>> de48e3a2cef81b757056e2ec2c9c159061ae78c0
