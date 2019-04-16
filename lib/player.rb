@@ -24,6 +24,7 @@ class Player
   def gets_damage(damage_received)
     @life_points = @life_points - damage_received
     if @life_points <= 0
+      @life_points = 0
       puts "le joueur #{@name} a été tué !"
     end
   end
