@@ -4,23 +4,25 @@ require_relative 'lib/human_player'
 require 'bundler'
 Bundler.require
 
+puts ""
 player1 = Player.new('Josiane')
 player2 = Player.new('José')
 
 while player1.life_points.positive? && player2.life_points.positive?
   puts '########################################'
+  puts ""
   puts "Voici l'état de chaque joueur "
+  player1.show_status
+  player2.show_status
+  puts ""
   puts '########################################'
-  puts player1.show_state
-  puts '########################################'
-  puts player2.show_state
+  puts ""
   puts "Passons à la phase d'attaque "
-  puts "Josiane attaque José"
+  puts ""
+  puts "-----Josiane attaque José-----"
   player1.attack(player2)
   break if player2.life_points <= 0
-  puts "José ne va pas se laisser faire"
+  puts "-----José ne va pas se laisser faire------"
   player2.attack(player1)
+  puts ""
 end
-
-
-binding.pry

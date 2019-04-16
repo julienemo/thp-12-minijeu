@@ -7,17 +7,17 @@ class Player
   def initialize(name)
     @name = name
     @life_points = 10
-    puts "Player #{name} created. Life point #{@life_points}"
+    puts "Player #{name} created. Life points #{@life_points}"
   end
 
   def show_status
-    puts "#{@name} has #{@life_points} life point(s)."
+    puts "     #{@name}: #{@life_points} point(s)."
   end
 
   def attack(target)
     strike = computes_damage
-    puts "#{@name} attacks #{target.name}."
-    puts "#{target.name} gets #{strike} damage."
+    puts "     #{@name} attacks #{target.name}."
+    puts "     #{target.name} gets #{strike} damage."
     target.gets_damage(strike)
   end
 
