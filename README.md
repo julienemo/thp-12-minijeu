@@ -1,4 +1,6 @@
-A ruby-generated folder
+THP day 12 mini jeu
 
 
--Julie Kwok @julienemo
+Dhiya Bakache @dhiya bakache
+Julie Kwok @julienemo
+Arthur Klein @Arthur Klein
