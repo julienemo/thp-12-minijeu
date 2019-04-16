@@ -3,24 +3,24 @@ require "pry"
 
 class HumanPlayer < Player
   attr_accessor :name, :weapon_lever
-  attr_reader :life_point
+  attr_reader :life_points
 
   def initialize(name)
     @name = name
-    @life_point = 100
+    @life_points = 100
     @weapon_level = 1
   end
 
   def show_status
-    puts "#{@name} has #{@life_point} life point(s) and a weapon of level #{@weapon_level}."
+    puts "#{@name} has #{@life_points} life point(s) and a weapon of level #{@weapon_level}."
   end
 
   def search_weapon
     level = rand_weapon
     puts "You've found a weapon of level #{level}."
     if level > @weapon_level
-      puts "It is more powerful than your actual weapon. You're now level #{level}."
       @weapon_lever = level
+      puts "Keep it! You're now level #{@weapon_lever}!"
     else
       puts "F@*#$...You may just as well keep what you have now... "
     end

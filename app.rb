@@ -26,3 +26,5 @@ while player1.life_points.positive? && player2.life_points.positive?
   player2.attack(player1)
   puts ""
 end
+
+binding.pry
