@@ -4,11 +4,15 @@ require "pry"
 class HumanPlayer < Player
   attr_accessor :name, :weapon_level
   attr_reader :life_points
+  @@all = []
 
+  # INSTANCE METHODS
   def initialize(name)
-    @name = name
     @life_points = 100
     @weapon_level = 1
+    @name = name
+    puts "Human player #{name} created. Life points #{@life_points}, weapon lever #{@weapon_level}."
+    @@all << self
   end
 
   def show_status
@@ -24,6 +28,11 @@ class HumanPlayer < Player
     else
       puts "F@*#$...You may just as well keep what you have now... "
     end
+  end
+
+  # CLASS METHOD
+  def self.all
+    return @@all
   end
 
   private
