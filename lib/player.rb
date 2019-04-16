@@ -14,6 +14,15 @@ class Player
     puts "#{@name} has #{@life_point} life point(s)."
   end
 
+  def gets_damage(damage_received) 
+    @life_points = @life_points - damage_received
+    if @life_points <= 0
+      puts "le joueur #{@name} a été tué !" 
+    end
+  end
+
+
+
 end
 
 binding.pry
