@@ -6,7 +6,7 @@ class Player
 
   def initialize(name)
     @name = name
-    @life_point = 40
+    @life_point = 10
     puts "Player #{name} created. Life point #{@life_point}"
   end
 
