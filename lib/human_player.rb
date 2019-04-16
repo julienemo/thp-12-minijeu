@@ -4,7 +4,7 @@ require "pry"
 class HumanPlayer < Player
   attr_accessor :name, :weapon_level
   attr_reader :life_points
-  @@all = []
+
 
   # INSTANCE METHODS
   def initialize(name)
@@ -12,7 +12,6 @@ class HumanPlayer < Player
     @weapon_level = 1
     @name = name
     puts "Human player #{name} created. Life points #{@life_points}, weapon lever #{@weapon_level}."
-    @@all << self
   end
 
   def show_status
@@ -30,14 +29,10 @@ class HumanPlayer < Player
     end
   end
 
-<<<<<<< HEAD
-  # CLASS METHOD
-  def self.all
-    return @@all
-=======
+
   def search_health_pack
     r_number = rand(1..6)
-    if r_number = 1
+    if r_number == 1
       puts "You did not find anything... "
     elsif [2..5].include?r_number
     	@life_points += 50
@@ -48,7 +43,6 @@ class HumanPlayer < Player
     	@life_points = 100 if @life_points > 100
     	puts 'Waow,  you found a pack of +80 life points !'
     end
->>>>>>> 439719d75f4ce2e586a815773031abdaae21f14f
   end
 
   private
@@ -60,4 +54,5 @@ class HumanPlayer < Player
   def rand_weapon
     rand(1..6)
   end
+
 end

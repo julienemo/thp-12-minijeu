@@ -1,4 +1,4 @@
-require_relative 'lib/game'
+#require_relative 'lib/game'
 require_relative 'lib/player'
 require_relative 'lib/human_player'
 require 'bundler'
@@ -33,6 +33,6 @@ def start_game
     jose = Player.new("Jose")
     print"---"
     josiane = Player.new("Josiane")
-
-
 end
+
+start_game
