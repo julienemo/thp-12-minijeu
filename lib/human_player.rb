@@ -15,7 +15,7 @@ class HumanPlayer < Player
   end
 
   def show_status
-    puts "#{@name} has #{@life_points} life point(s) and a weapon of level #{@weapon_level}."
+    puts "     #{@name} has #{@life_points} life point(s) and a weapon of level #{@weapon_level}."
   end
 
   def search_weapon

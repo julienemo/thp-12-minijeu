@@ -16,9 +16,15 @@ class Player
 
   def attack(target)
     strike = computes_damage
-    puts "     #{@name} attacks #{target.name}."
-    puts "     #{target.name} gets #{strike} damage."
+    puts ""
+    puts "     #{@name} attacks #{target.name} with force #{strike}."
+    if target.life_points > strike
+      puts "     #{target.name} gets #{strike} damages."
+    else
+      puts "     #{target.name} gets killed."
+    end
     target.gets_damage(strike)
+    puts ""
   end
 
   def gets_damage(damage_received)
